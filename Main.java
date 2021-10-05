@@ -139,6 +139,7 @@ public class Map{
                 return this.words.get(i);
             }
         }
+        put(key,bydefault);
         return bydefault;
     }
     public Object remove(Object key){
