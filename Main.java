@@ -64,20 +64,25 @@ class List { ///Arraylist
 
     int indexOf(Object ob) {
         int index = -1;
-        for (int i = 0; i < this.size; i++)
-            if (this.arr[i] == ob) {
+        for (int i = 0; i < this.size; i++) {
+           // System.out.println(i + " " + this.arr[i] + " (" + ob);
+
+            if (this.arr[i].equals(ob)) {
                 index = i;
                 break;
             }
+        }
 
         return index;
     }
     int lastIndexOf(Object ob) {
         int index = -1;
-        for (int i = 0; i < this.size; i++)
-            if (this.arr[i] == ob) {
+        for (int i = this.size-1; i >= 0; i--) {
+            if (this.arr[i].equals(ob)) {
                 index = i;
+                break;
             }
+        }
 
         return index;
     }
